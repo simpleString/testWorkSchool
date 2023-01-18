@@ -1,0 +1,28 @@
+<h3>Create:</h3>
+<form method="post">
+  <ul class="text">
+    <li>
+      <select name="group">
+        {{#each groups}}
+          <option value="{{this.id}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+    </li>
+    <li>
+      <select name="subject">
+        {{#each subjects}}
+          <option value="{{this.id}}">{{this.name}}</option>
+        {{/each}}
+      </select>
+    </li>
+    <li>
+      <select name="teacher">
+        {{#each teachers}}
+          <option value="{{this.id}}">{{this.name}} {{this.surname}}</option>
+        {{/each}}
+      </select>
+    </li>
+  </ul>
+  <button type="submit">Create</button>
+  <a href="/">Back</a>
+</form>

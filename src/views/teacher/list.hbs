@@ -1,0 +1,18 @@
+<ul class="grid teacher-grid">
+  <li>Id</li>
+  <li>Name</li>
+  <li>Surname</li>
+  <li>Degree</li>
+  <li>Edit</li>
+  <li>Delete</li>
+</ul>
+{{#each teachers}}
+  <ul class="grid teacher-grid">
+    <li>{{this.id}}</li>
+    <li>{{this.name}}</li>
+    <li>{{this.surname}}</li>
+    <li>{{this.degree}}</li>
+    <li><a href="/teacher/{{this.id}}/edit">edit</a></li>
+    <li><a href="/teacher/{{this.id}}/delete">delete</a></li>
+  </ul>
+{{/each}}

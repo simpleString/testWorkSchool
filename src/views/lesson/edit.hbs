@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    {{#if lesson}}
+      <h3>Edit:</h3>
+      <form method="post">
+        <ul class="text">
+          <li>{{lesson.id}}</li>
+          <li>
+            <select name="group">
+              {{#each groups}}
+                {{#if (isEqual ../lesson.groupId id)}}
+                  <option selected value="{{this.id}}">{{this.name}}</option>
+                {{else}}
+                  <option value="{{this.id}}">{{this.name}}</option>
+                {{/if}}
+              {{/each}}
+            </select>
+          </li>
+          <li>
+            <select name="subject">
+              {{#each subjects}}
+                {{#if (isEqual ../lesson.subjectId id)}}
+                  <option selected value="{{this.id}}">{{this.name}}</option>
+                {{else}}
+                  <option value="{{this.id}}">{{this.name}}</option>
+                {{/if}}
+              {{/each}}
+            </select>
+          </li>
+          <li>
+            <select name="teacher">
+              {{#each teachers}}
+                {{#if (isEqual ../lesson.teacherId id)}}
+                  <option selected value="{{this.id}}">{{this.name}} {{this.surname}}</option>
+                {{else}}
+                  <option value="{{this.id}}">{{this.name}} {{this.surname}}</option>
+                {{/if}}
+              {{/each}}
+            </select>
+          </li>
+        </ul>
+        <button type="submit">Edit</button>
+        <a href="/">Back</a>
+      </form>
+    {{/if}}
+  </body>
+</html>

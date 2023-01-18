@@ -1,0 +1,20 @@
+<ul class="grid lesson-grid">
+  <li>Group</li>
+  <li>Subject</li>
+  <li>Teacher Name</li>
+  <li>Teacher Surname</li>
+  <li>Students</li>
+  <li>Edit</li>
+  <li>Delete</li>
+</ul>
+<ul class="grid lesson-grid">
+  {{#each lessons}}
+    <li>{{this.group}}</li>
+    <li>{{this.subject}}</li>
+    <li>{{this.tname}}</li>
+    <li>{{this.tsurname}}</li>
+    <li><a href="/lesson/{{this.id}}/students">students</a></li>
+    <li><a href="/lesson/{{this.id}}/edit">edit</a></li>
+    <li><a href="/lesson/{{this.id}}/delete">delete</a></li>
+  {{/each}}
+</ul>

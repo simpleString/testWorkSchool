@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+nav {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+nav * {
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid li {
+  padding: 4px;
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid black;
+  overflow-wrap: break-word;
+}
+
+.teacher-grid {
+  grid-template-columns: repeat(6, 110px);
+}
+
+.lesson-grid {
+  grid-template-columns: repeat(7, 110px);
+}
+
+.text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text li {
+  list-style-type: none;
+}
